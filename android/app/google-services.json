@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "752440138682",
+    "project_id": "workout-list-f3a22",
+    "storage_bucket": "workout-list-f3a22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752440138682:android:137d2ec730e867e7da5b83",
+        "android_client_info": {
+          "package_name": "com.example.workout_list"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752440138682-n6tff0vjojf8rmqq3ese06c1m9v4fklj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYqFuezGf28-fftyCDvQPQBt51B4chc-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752440138682-n6tff0vjojf8rmqq3ese06c1m9v4fklj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "752440138682-g1skri2ptedtkpt7ghdl274rgu27m206.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.workoutList.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

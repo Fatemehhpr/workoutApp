@@ -119,31 +119,35 @@ class _personalWorkoutsScreenState extends State<personalWorkoutsScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            children: [
-                              Container(
-                                height: screenHeight / 15,
-                                width: screenHeight / 15 + 10,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(5),
-                                  child: Image.network(
-                                    workout.imageAddress,
-                                    fit: BoxFit.fill,
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: screenHeight / 15,
+                                  width: screenHeight / 15 + 10,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(5),
+                                    child: Image.network(
+                                      workout.imageAddress,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                workout.name,
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
+                                SizedBox(
+                                  width: 10,
                                 ),
-                              ),
-                            ],
+                                Expanded(
+                                  child: Text(
+                                    workout.name,
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           Row(
                             children: [
@@ -170,7 +174,7 @@ class _personalWorkoutsScreenState extends State<personalWorkoutsScreen> {
                                   setState(() {
                                     isDoneList[index] = !temp;
                                   });
-
+                      
                                   if (isDoneList[index] == true) {
                                     await FirebaseFirestore.instance.collection('users').doc(user.getId).collection('personalWorkouts').doc(workout.id.toString()).update({
                                       'isDone': true,
@@ -181,7 +185,7 @@ class _personalWorkoutsScreenState extends State<personalWorkoutsScreen> {
                                       "isDone" : false,
                                     });
                                   }
-
+                      
                                 },
                               )
                             ],
